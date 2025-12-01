@@ -1,0 +1,465 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Barlow", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #EFF6FF;
+  color: #2A4A5C;
+}
+
+/* ===============  LAYOUT  ================= */
+.page {
+  padding: 40px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  max-width: 1120px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.card__left {
+  flex: 1.05;
+  background: linear-gradient(135deg, #2A4A5C, #3698FB);
+  color: #FFFFFF;
+  position: relative;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  z-index: 2;
+}
+
+.brand__logo {
+  height: 28px;
+  width: auto;
+}
+
+.brand__tagline {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT SIDE */
+.card__right {
+  flex: 1.2;
+  padding: 52px 56px;
+}
+
+.intro__title {
+  font-size: 28px;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.intro__subtitle {
+  margin: 0 0 32px;
+  font-size: 14px;
+  color: #7B8A92;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 3px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+  background-color 0.15s ease, filter 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn__icon {
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.btn__icon--in {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.btn--social {
+  color: #FFFFFF;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn--facebook {
+  background-color: #255A9B;
+}
+
+.btn--linkedin {
+  background-color: #0076B6;
+}
+
+.btn--primary {
+  background-color: #3698FB;
+  color: #FFFFFF;
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 16px;
+  box-shadow: 0 12px 24px rgba(54, 152, 251, 0.45);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Divider */
+.divider {
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divider__line {
+  flex: 1;
+  height: 1px;
+  background: #EEEEEE;
+}
+
+.divider__text {
+  font-size: 12px;
+  color: #96A5B1;
+  text-transform: uppercase;
+}
+
+/* Form */
+.form__row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  min-width: 180px;
+}
+
+.field__label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #96A5B1;
+  margin-bottom: 6px;
+}
+
+.field__input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #EEEEEE;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #2A4A5C;
+  outline: none;
+  background: #FFFFFF;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+  transform 0.1s ease;
+}
+
+.field__input::placeholder {
+  color: #AFAFAF;
+}
+
+.field__input:hover {
+  border-color: #96A5B1;
+}
+
+.field__input:focus-visible {
+  border-color: #3698FB;
+  box-shadow: 0 0 0 2px rgba(54, 152, 251, 0.18);
+  transform: translateY(-1px);
+}
+
+.fieldset {
+  border: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.fieldset__legend {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.fieldset__hint {
+  font-size: 13px;
+  color: #7B8A92;
+  margin: 0 0 12px;
+}
+
+.investor-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+/* Custom radios */
+.radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #7B8A92;
+  position: relative;
+}
+
+.radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio__custom {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #96A5B1;
+  margin-right: 8px;
+  position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.radio__custom::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #3698FB;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.radio__label {
+  color: #2A4A5C;
+}
+
+.radio input:checked + .radio__custom {
+  border-color: #3698FB;
+  box-shadow: 0 0 0 2px rgba(54, 152, 251, 0.18);
+}
+
+.radio input:checked + .radio__custom::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio:hover .radio__custom {
+  border-color: #3698FB;
+}
+
+.info-box {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7B8A92;
+  background: #EFF6FF;
+  border-radius: 3px;
+  border: 1px solid #EEEEEE;
+  padding: 12px;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #7B8A92;
+  margin-top: 8px;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox__custom {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #96A5B1;
+  margin-top: 2px;
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, background-color 0.15s ease,
+  box-shadow 0.15s ease;
+}
+
+.checkbox__custom::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(45deg) scale(0.6);
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.checkbox input:checked + .checkbox__custom {
+  background: #3698FB;
+  border-color: #3698FB;
+  box-shadow: 0 0 0 2px rgba(54, 152, 251, 0.18);
+}
+
+.checkbox input:checked + .checkbox__custom::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+.checkbox__label {
+  line-height: 1.5;
+}
+
+.link {
+  color: #3698FB;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(54, 152, 251, 0.35);
+  margin-left: 4px;
+}
+
+.link:hover,
+.link:focus-visible {
+  border-bottom-color: rgba(54, 152, 251, 0.9);
+}
+
+/* ===============  RESPONSIVE  ================= */
+@media (max-width: 1024px) {
+  .card { max-width: 960px; }
+  .card__right { padding: 40px 36px; }
+}
+
+@media (max-width: 880px) {
+  .card { flex-direction: column; }
+  .card__left { min-height: 260px; }
+  .card__right { padding: 32px 24px 28px; }
+  .intro__title { font-size: 24px; }
+}
+
+@media (max-width: 560px) {
+  .page { padding: 16px; }
+  .social-buttons { flex-direction: column; }
+  .form__row { flex-direction: column; }
+}
+
+
+/* ========================================================= */
+/* === FIXES ADDED FOR TEMPLATE MATCHING — DO NOT REMOVE === */
+/* ========================================================= */
+
+/* Remove border effect by removing side padding */
+.card__left {
+  padding: 24px 0 0;
+}
+
+/* Make hero image full width */
+.hero {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Social button sizing */
+.social-buttons .btn--social {
+  flex: 0 0 230px;
+  height: 56px;
+  justify-content: center;
+}
+
+/* Icon alignment */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* Facebook SVG icon size */
+.btn--facebook .btn__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* LinkedIn square */
+.btn__icon--in {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}

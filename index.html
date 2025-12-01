@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iintoo Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <!-- LEFT -->
+      <aside class="card__left">
+        <header class="brand">
+          <img src="img/logo (1).svg" alt="iintoo logo" class="brand__logo">
+          <span class="brand__tagline">invest together</span>
+        </header>
+        <div class="hero">
+          <img src="img/bg.jpg" alt="Analytics illustration" class="hero__img">
+        </div>
+      </aside>
+
+      <!-- RIGHT -->
+      <main class="card__right">
+        <section class="intro">
+          <h1 class="intro__title">Get iintoo it today</h1>
+          <p class="intro__subtitle">
+            There is no charge or obligation upon registration.
+          </p>
+        </section>
+
+        <section class="social-buttons">
+          <button class="btn btn--social btn--facebook">
+            <img src="img/facebook.svg" alt="" class="btn__icon">
+            Register with Facebook
+          </button>
+          <button class="btn btn--social btn--linkedin">
+            <span class="btn__icon btn__icon--in">in</span>
+            Register with LinkedIn
+          </button>
+        </section>
+
+        <div class="divider">
+          <span class="divider__line"></span>
+          <span class="divider__text">or</span>
+          <span class="divider__line"></span>
+        </div>
+
+        <form class="form">
+          <div class="form__row">
+            <div class="field">
+              <label for="email" class="field__label">Email</label>
+              <input type="email" id="email" class="field__input"
+                     placeholder="gus.goodwin@gmail.com">
+            </div>
+            <div class="field">
+              <label for="phone" class="field__label">Phone</label>
+              <input type="tel" id="phone" class="field__input">
+            </div>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">What type of investor are you?</legend>
+            <p class="fieldset__hint">Select the type of investor you are below.</p>
+
+            <div class="investor-types">
+              <label class="radio">
+                <input type="radio" name="investorType" value="individual" checked>
+                <span class="radio__custom"></span>
+                <span class="radio__label">Individual</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="investorType" value="business">
+                <span class="radio__custom"></span>
+                <span class="radio__label">Business</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="investorType" value="ira">
+                <span class="radio__custom"></span>
+                <span class="radio__label">IRA</span>
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="investorType" value="trust">
+                <span class="radio__custom"></span>
+                <span class="radio__label">Trust</span>
+              </label>
+            </div>
+
+            <div class="info-box">
+              I am a natural person investing on my own behalf as a sole owner,
+              joint tenant, or tenant in common.
+            </div>
+          </fieldset>
+
+          <label class="checkbox">
+            <input type="checkbox" name="terms">
+            <span class="checkbox__custom"></span>
+            <span class="checkbox__label">
+              I agree to the terms and receiving notifications from iintoo
+              <a href="#" class="link">View full terms</a>
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn--primary">
+            Create Account
+          </button>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
